@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql charts network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,12 +28,15 @@ SOURCES += \
     employee.cpp \
         main.cpp \
         mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    qrcode.cpp
 
 HEADERS += \
     employee.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    qrcode.h \
+    smssender.h
 
 FORMS += \
         mainwindow.ui

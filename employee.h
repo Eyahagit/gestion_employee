@@ -13,7 +13,7 @@ public:
     // constructeur
     Employee();
     // constructeur parametre
-    Employee(QString, QString, QString);
+    Employee(QString, QString, QString, QString);
 
     // getter setter
     int getID_E();
@@ -26,9 +26,12 @@ public:
 
     ///////////// CRUD Operations /////////////////
     bool add();
-    bool update(int, QString, QString, QString);
+    bool update(int, QString, QString, QString, QString);
     bool remove(int id);
     QSqlQueryModel* display();
+    QSqlQueryModel* trie_id();
+    QSqlQueryModel* trie_nom();
+    QSqlQueryModel* trie_contact();
 
 
 private:
@@ -36,6 +39,7 @@ private:
     QString name_E;
     QString address_E;
     QString contact_E;
+    QString genre;
 };
 
 #endif // EMPLOYEE_H
